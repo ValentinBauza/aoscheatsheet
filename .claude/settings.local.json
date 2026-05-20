@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(brew install:*)",
+      "Bash(pdftotext:*)",
+      "Bash(cd:*)",
+      "Bash(cat:*)",
+      "Bash(for pdf:*)",
+      "Bash(grep:*)",
+      "Bash(echo:*)",
+      "Bash(for file:*)",
+      "Bash(do echo:*)",
+      "Read(//export const.*Spearhead = {/,/**)",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(for id:*)",
+      "Bash(pdfimages:*)",
+      "Bash(pdftoppm:*)",
+      "Bash(cp:*)",
+      "Bash(file:*)",
+      "Bash(for f:*)",
+      "Bash(do identify:*)",
+      "Read(//Users/valentin.theo.sebastien.bauza@m10s.io/IdeaProjects/aoscheatsheet/**)",
+      "Bash(for img:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(chmod:*)",
+      "Bash(sips:*)"
+    ]
+  }
+}
