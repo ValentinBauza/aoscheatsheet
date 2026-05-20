@@ -368,7 +368,7 @@
 }
 
 .weapon-stats-table th {
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0.5rem;
   text-align: center;
   color: #ffffff;
   font-weight: 700;
@@ -376,10 +376,13 @@
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 .weapon-stats-table th:first-child {
   text-align: left;
+  white-space: normal;
 }
 
 .weapon-stats-table th:last-child {
@@ -396,21 +399,25 @@
 }
 
 .weapon-stats-table td {
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0.5rem;
   text-align: center;
   color: #3d2f24;
   font-weight: 600;
   font-size: 0.95rem;
   border-right: 1px solid #ffb3b3;
+  white-space: nowrap;
 }
 
 .weapon-stats-table td:first-child {
   text-align: left;
   font-weight: 700;
   color: #8b6f47;
+  white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  max-width: 200px;
+  hyphens: auto;
+  min-width: 150px;
+  max-width: 250px;
 }
 
 .weapon-name-cell {
@@ -558,7 +565,7 @@
   }
 
   .weapon-stats-table {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     overflow-x: auto;
     display: block;
   }
@@ -568,21 +575,33 @@
   .weapon-stats-table tr {
     display: table;
     width: 100%;
-    table-layout: fixed;
+    table-layout: auto;
   }
 
-  .weapon-stats-table th,
+  .weapon-stats-table th {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+
   .weapon-stats-table td {
-    padding: 0.4rem 0.3rem;
-    font-size: 0.75rem;
+    padding: 0.5rem 0.4rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
   }
 
   .weapon-stats-table td:first-child {
-    max-width: 120px;
+    max-width: none;
+    min-width: 100px;
+    white-space: normal;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .weapon-ability {
     font-size: 0.7rem;
+    word-break: break-word;
   }
 
   .back-link {
