@@ -566,16 +566,24 @@
 
   .weapon-stats-table {
     font-size: 0.8rem;
-    overflow-x: auto;
     display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .weapon-stats-table thead,
-  .weapon-stats-table tbody,
-  .weapon-stats-table tr {
+  .weapon-stats-table tbody {
     display: table;
     width: 100%;
-    table-layout: auto;
+  }
+
+  .weapon-stats-table tr {
+    display: table-row;
+  }
+
+  .weapon-stats-table th,
+  .weapon-stats-table td {
+    display: table-cell;
   }
 
   .weapon-stats-table th {
@@ -583,16 +591,21 @@
     font-size: 0.7rem;
     white-space: nowrap;
     vertical-align: middle;
+    min-width: 50px;
+  }
+
+  .weapon-stats-table th:first-child {
+    min-width: 100px;
   }
 
   .weapon-stats-table td {
     padding: 0.5rem 0.4rem;
     font-size: 0.8rem;
     white-space: nowrap;
+    min-width: 50px;
   }
 
   .weapon-stats-table td:first-child {
-    max-width: none;
     min-width: 100px;
     white-space: normal;
     word-break: break-word;
