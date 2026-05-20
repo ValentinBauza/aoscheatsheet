@@ -1,0 +1,228 @@
+.home-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #fff5f5 50%, #ffffff 100%);
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.home-header h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #d4a574 0%, #c4956c 50%, #d4a574 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0 0 0.5rem 0;
+  padding: 0.2rem 0;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #6b5744;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+  font-weight: 300;
+}
+
+.alliance-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem auto;
+}
+
+.alliance-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  color: #b8956d;
+}
+
+.alliance-section.alliance-order .alliance-title {
+  color: #1976d2;
+}
+
+.alliance-section.alliance-death .alliance-title {
+  color: #7b1fa2;
+}
+
+.alliance-section.alliance-chaos .alliance-title {
+  color: #c62828;
+}
+
+.factions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.faction-card {
+  position: relative;
+  background: linear-gradient(135deg, #ffe5e5 0%, #ffd5d5 100%);
+  border: 2px solid #ffb3b3;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(255, 179, 179, 0.3);
+  overflow: hidden;
+}
+
+.faction-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.faction-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4a574;
+  box-shadow: 0 8px 30px rgba(212, 165, 116, 0.4), 0 0 40px rgba(255, 179, 179, 0.5);
+}
+
+.faction-card:hover::before {
+  opacity: 1;
+}
+
+.faction-card-inner h2 {
+  font-size: 1.8rem;
+  margin: 0 0 0.75rem 0;
+  color: #b8956d;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.wip-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.5rem;
+  background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+  color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(255, 140, 0, 0.3);
+  border: 1px solid #ff8c00;
+}
+
+.faction-card-inner p {
+  color: #4a3828;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.faction-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(212, 165, 116, 0.3);
+}
+
+.spearhead-count {
+  font-size: 0.85rem;
+  color: #6b5744;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #b8956d;
+  transition: transform 0.3s ease;
+}
+
+.faction-card:hover .arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .home-header {
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .home-header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+  }
+
+  .alliance-section {
+    margin-bottom: 2rem;
+  }
+
+  .alliance-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .factions-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .faction-card {
+    padding: 1.25rem;
+  }
+
+  .faction-card-inner h2 {
+    font-size: 1.5rem;
+  }
+
+  .wip-badge {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .faction-card-inner p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .faction-card-footer {
+    padding-top: 0.75rem;
+  }
+
+  .spearhead-count {
+    font-size: 0.8rem;
+  }
+
+  .arrow {
+    font-size: 1.3rem;
+  }
+}
